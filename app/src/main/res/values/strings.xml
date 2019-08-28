@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MadLibs</string>
+    <string name="title_activity_mad_lib_display">MadLibDisplay</string>
+</resources>
