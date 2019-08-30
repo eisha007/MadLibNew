@@ -15,7 +15,7 @@ public class MadLibDisplay extends AppCompatActivity {
     public static final String MY_FOOD = "food";
     public static final String MY_ANIMAL = "animal";
     public static final String MY_YEAR = "year";
-    public static final String MY_QUOTE = "enemy";
+    public static final String MY_QUOTE = "quote";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);
@@ -31,7 +31,16 @@ public class MadLibDisplay extends AppCompatActivity {
                 animal + " named " + girl + ". One day, " + girl + " went to" +
                 " Target to buy some " + food + " for her birthday party. At " +
                 "Target, " + girl + " saw her worst enemy : " + enemy + "the giraffe. Why " +
-                "were they enemies, you may ask.";
+                "were they enemies, you may ask. Well in the year " + year + ", Jennifer the Goose" +
+                " and " + girl + " were hanging out until all of a sudden, " + enemy + " came " +
+                "to their hang out sesh and started convincing Jennifer that doing drugs, vaping, " +
+                "and drinking were good ideas! " + girl + " was not okay with this and once" +
+                " Jennifer started falling on the wrong side of the tracks, " + girl + " unfriended " +
+                "her. For years, " + girl + " and Jennifer didn't speak and " + girl + " grew angry " +
+                "that " + enemy + " stole her best friend and started making her do bad things. Fast" +
+                " forward to their time at Target and " + girl + " was about to head out of the store with her" +
+                " recently purchased " + food + ". Instead of just calmly leaving " + girl + " threw the " + food +
+                " at " + enemy + " and walked out of the store like a BAWSE. Moral of the story is that: " + quote;
         TextView str = (TextView) findViewById(R.id.info);
         str.setText(strToDisplay);
         Toolbar toolbar = findViewById(R.id.toolbar);
