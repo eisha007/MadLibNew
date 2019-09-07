@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,10 +107,15 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(MadLibDisplay.MY_ADJ, myAdj);
         intent.putExtra(MadLibDisplay.MY_COUNTRY, myCountry);
 
-
-        // loads the next activity
-        startActivity(intent);
-
+        if (myGirl.length() <= 0 ||myEnemy.length() <= 0 || myFood.length() <= 0 || myAnimal.length() <= 0 || myYear.length() <= 0 || myQuote.length() <= 0 ||
+                myObject.length() <= 0 || myGuy.length() <= 0 || myPlanet.length() <= 0 || myColor.length() <= 0 || myTeacher.length() <= 0 || myNumber.length() <= 0 ||
+                myCeleb.length() <= 0 || myHabitOne.length() <= 0 || myHabitTwo.length() <= 0 || myHoliday.length() <= 0 || myStore.length() <= 0 || myDay.length() <= 0 ||
+                mySport.length() <= 0 || myTV.length() <= 0 || myAdj.length() <= 0 || myCountry.length() <= 0) {
+            Toast.makeText(MainActivity.this, "there are empty text boxes. please fill out ALL text boxes", Toast.LENGTH_SHORT).show();
+        }
+    else {
+            startActivity(intent);
+        }
     }
 
 
@@ -198,12 +204,24 @@ public class MainActivity extends AppCompatActivity {
         intent2.putExtra(MadLibDisplay.MY_ADJ, myAdj);
         intent2.putExtra(MadLibDisplay.MY_COUNTRY, myCountry);
 
-        startActivity(intent2);
+        if (myGirl.length() <= 0 ||myEnemy.length() <= 0 || myFood.length() <= 0 || myAnimal.length() <= 0 || myYear.length() <= 0 || myQuote.length() <= 0 ||
+                myObject.length() <= 0 || myGuy.length() <= 0 || myPlanet.length() <= 0 || myColor.length() <= 0 || myTeacher.length() <= 0 || myNumber.length() <= 0 ||
+                myCeleb.length() <= 0 || myHabitOne.length() <= 0 || myHabitTwo.length() <= 0 || myHoliday.length() <= 0 || myStore.length() <= 0 || myDay.length() <= 0 ||
+                mySport.length() <= 0 || myTV.length() <= 0 || myAdj.length() <= 0 || myCountry.length() <= 0) {
+            Toast.makeText(MainActivity.this, "there are empty text boxes. please fill out ALL text boxes", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            startActivity(intent2);
+        }
+
+
     }
 
     public void backHome(View v){
         Intent main = new Intent(this, MainActivity.class);
         startActivity(main);
+
     }
+
     }
 

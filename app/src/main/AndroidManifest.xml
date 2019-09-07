@@ -12,7 +12,7 @@
         <activity
             android:name=".MadLibDisplay2"
             android:label="@string/title_activity_mad_lib_display2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MadLibDisplay"
             android:label="@string/title_activity_mad_lib_display"

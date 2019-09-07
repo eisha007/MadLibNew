@@ -32,14 +32,15 @@
         android:id="@+id/home2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="542dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="85dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="71dp"
+        android:onClick="backHome2"
         android:text="go home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="backHome2"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

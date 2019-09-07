@@ -72,14 +72,14 @@ public class MadLibDisplay extends AppCompatActivity {
         String strToDisplay = "Once upon a time, there was a " + "<b><u><i>" +
                 animal+ "</b></u></i>" + " named " + "<b><u><i>" + girl + "</b></u></i>" + ". One day, " + "<b><u><i>"+ girl + "</b></u></i>" + " went to "+ "<b><u><i>" + store+ "</b></u></i>" + " to buy some " + "<b><u><i>"+ food + "</b></u></i>"
                 + " for her " + "<b><u><i>" + holiday + "</b></u></i>" +" party. At "+ "<b><u><i>"+
-                store+ "</b></u></i>" + ", " + "<b><u><i>"+ girl +"</b></u></i>" +  " saw her worst enemy : "+ "<b><u><i>" + enemy + "</b></u></i>" + "the giraffe. Why " +
+                store+ "</b></u></i>" + ", " + "<b><u><i>"+ girl +"</b></u></i>" +  " saw her worst enemy : "+ "<b><u><i>" + enemy + "</b></u></i>" + " the giraffe. Why " +
                 "were they enemies, you may ask. Well in the year "+ "<b><u><i>" + year +"</b></u></i>" +  ", " + "<b><u><i>" + teacher + "</b></u></i>" +" the Alpaca" +
                 " and "+ "<b><u><i>" + girl + "</b></u></i>" + " were hanging out until all of a sudden, " + "<b><u><i>"+ enemy + "</b></u></i>" + " came " +
                 "to their hang out sesh and started convincing "+ "<b><u><i>" + teacher + "</b></u></i>" + " that allowing their students" +
                 " to cheat on tests was a good idea! "+ "<b><u><i>" + girl + "</b></u></i>" + " was not okay with this and once " + "<b><u><i>"+ teacher +"</b></u></i>" +
-                " started falling on the wrong side of the tracks, "+ "<b><u><i>" + girl +"</b></u></i>" +  " 'unfriended' " +
+                " started falling on the wrong side of the tracks, "+ "<b><u><i>" + girl +"</b></u></i>" +  " 'unfriended' them " +
                 "her. For years, "+ "<b><u><i>" + girl + "</b></u></i>" + " and " + "<b><u><i>"+ teacher +"</b></u></i>" + " didn't speak and " + "<b><u><i>"+ girl + "</b></u></i>" + " grew angry " +
-                "that "+ "<b><u><i>" + enemy +"</b></u></i>" +  " stole her best friend and started making her do bad things. Fast" +
+                "that "+ "<b><u><i>" + enemy +"</b></u></i>" +  " stole her best friend and started making them do bad things. Fast" +
                 " forward to their time at " + "<b><u><i>"+ store + "</b></u></i>" +" and " + "<b><u><i>"+ girl + "</b></u></i>" + " was about to head out of the store with her" +
                 " recently purchased "+ "<b><u><i>" + food +"</b></u></i>" +  ". Instead of just calmly leaving " + "<b><u><i>"+ girl +"</b></u></i>" +  " threw the " + "<b><u><i>"+ food +"</b></u></i>" +
                 " at "+ "<b><u><i>" + enemy + "</b></u></i>" + " and walked out of the store like a BAWSE. Moral of the story is that: "+ "<b><u><i>" + quote + "</b></u></i>";
@@ -101,5 +101,7 @@ public class MadLibDisplay extends AppCompatActivity {
         Intent home2 = new Intent(this, MainActivity.class);
         startActivity(home2);
     }
+
+
 
 }
