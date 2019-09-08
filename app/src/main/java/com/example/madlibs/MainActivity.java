@@ -1,11 +1,14 @@
 package com.example.madlibs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
 import android.widget.EditText;
@@ -115,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         }
     else {
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_out, R.anim.slide_in) ;
         }
     }
 
@@ -212,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             startActivity(intent2);
-        }
+            overridePendingTransition(R.anim.slide_out, R.anim.slide_in) ;        }
 
 
     }
@@ -220,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
     public void backHome(View v){
         Intent main = new Intent(this, MainActivity.class);
         startActivity(main);
+        overridePendingTransition(R.anim.slide_out, R.anim.slide_in) ;
 
     }
 

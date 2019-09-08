@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MadLibDisplay2 extends AppCompatActivity {
@@ -108,5 +109,85 @@ public class MadLibDisplay2 extends AppCompatActivity {
     public void backHome(View view) {
         Intent home = new Intent(this, MainActivity.class);
         startActivity(home);
+        overridePendingTransition(R.anim.slide_out, R.anim.slide_in) ;
+    }
+
+    public void shareInfo(View v) {
+
+        EditText girl = (EditText) findViewById(R.id.girlOne);
+        EditText enemy = (EditText) findViewById(R.id.girlTwo);
+        EditText food = (EditText) findViewById(R.id.food);
+        EditText animal = (EditText) findViewById(R.id.animalOne);
+        EditText year = (EditText) findViewById(R.id.year);
+        EditText quote = (EditText) findViewById(R.id.quote);
+        EditText object = (EditText) findViewById(R.id.object);
+        EditText guy = (EditText) findViewById(R.id.guy);
+        EditText planet = (EditText) findViewById(R.id.planet);
+        EditText color = (EditText) findViewById(R.id.color);
+        EditText teacher = (EditText) findViewById(R.id.teacher);
+        EditText number = (EditText) findViewById(R.id.number);
+        EditText celebrity = (EditText) findViewById(R.id.celebrity);
+        EditText habit = (EditText) findViewById(R.id.habit);
+        EditText habit2 = (EditText) findViewById(R.id.habit2);
+        EditText holiday = (EditText) findViewById(R.id.holiday);
+        EditText store = (EditText) findViewById(R.id.store);
+        EditText day = (EditText) findViewById(R.id.day);
+        EditText sport = (EditText) findViewById(R.id.sport);
+        EditText tv = (EditText) findViewById(R.id.tv);
+        EditText adjective = (EditText) findViewById(R.id.adjective);
+        EditText country = (EditText) findViewById(R.id.country);
+
+    /*
+        String myGirl = girl.getText().toString();
+        String myEnemy = enemy.getText().toString();
+        String myFood = food.getText().toString();
+        String myAnimal = animal.getText().toString();
+        String myYear = year.getText().toString();
+        String myQuote = quote.getText().toString();
+        String myObject = object.getText().toString();
+        String myGuy = guy.getText().toString();
+        String myPlanet = planet.getText().toString();
+        String myColor = color.getText().toString();
+        String myTeacher = teacher.getText().toString();
+        String myNumber = number.getText().toString();
+        String myCeleb = celebrity.getText().toString();
+        String myHabitOne = habit.getText().toString();
+        String myHabitTwo = habit2.getText().toString();
+        String myHoliday = holiday.getText().toString();
+        String myStore = store.getText().toString();
+        String myDay = day.getText().toString();
+        String mySport = sport.getText().toString();
+        String myTV = tv.getText().toString();
+        String myAdj = adjective.getText().toString();
+        String myCountry = country.getText().toString();
+*/
+
+
+        String myMessage = "Today, we shall discuss the story of a girl named " + "<b><u><i>"+ girl +"</b></u></i>" + ". She came from the planet "+ "<b><u><i>"+ planet + "</b></u></i>" +". "+ "<b><u><i>" +
+                girl +"</b></u></i>" + " looked different than most girls. She told people she came from "+ "<b><u><i>" + country + "</b></u></i>" +" , but no one understood why she looked so different. " +
+                "She had " + "<b><u><i>"+ color + "</b></u></i>" +" skin, "+ "<b><u><i>" + number +"</b></u></i>" + " " + "<b><u><i>" + adjective +"</b></u></i>" + " toes, and used to carry around a bag of " + "<b><u><i>"+ object +"</b></u></i>" + " wherever she went. People bullied her," +
+                " but one day, she became really great friends with a girl named "+ "<b><u><i>" + enemy +"</b></u></i>" + ". They spent countless days together watching the show " + "<b><u><i>"+ tv +"</b></u></i>" + ". " +
+                "Though "+ "<b><u><i>" + girl +"</b></u></i>" + " looked different, " + "<b><u><i>"+ enemy + "</b></u></i>" +" didn't care. But others did and this made "+ "<b><u><i>" + girl + "</b></u></i>" +" very insecure. Every single day, " +
+                "she would go to "+ "<b><u><i>" + store + "</b></u></i>" +" to get makeup and new clothes to make herself look prettier. Finally, the most important day of the school year had finally come" +
+                ". The "+ "<b><u><i>" +  holiday + " </b></u></i>" +"party hosted by the most popular guy at school: "+ "<b><u><i>" + guy + "</b></u></i>" + ". For most of the morning, "+ "<b><u><i>" + girl + "</b></u></i>" +" spent her time" +
+                " perfecting her makeup and outfits so she looked as good as possible. On that " + "<b><u><i>"+ day +"</b></u></i>" + " night of the party, "+ "<b><u><i>" + girl +"</b></u></i>" + "'s life came " +
+                "crumbling. People started rumoring that she had bad habits of " + "<b><u><i>"+ habit + "</b></u></i>" +" and " + "<b><u><i>"+ habit2 +"</b></u></i>" + ". Enough was enough and " + "<b><u><i>"+ girl + "</b></u></i>" +" was sick of " +
+                "being the laughing stock of the whole group. She gave a motivational speech about true beauty and being kind which ended up going viral and got the " +
+                "attention of celebrities like " + "<b><u><i>"+ celebrity + "</b></u></i>" +". Now, "+ "<b><u><i>" + girl +"</b></u></i>" + " was an international sensation and proved that you can still be a cool kid even" +
+                " if you are from "+ "<b><u><i>"+ planet +"</b></u></i>" + " and have "+ "<b><u><i>" + color +"</b></u></i>" + " skin and "+ "<b><u><i>" + number + "</b></u></i>" +" "+ "<b><u><i>" + adjective + "</b></u></i>" +" toes";
+
+        // These three lines can send the image to any app through any app that sends messages
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        // declare the title for when pulling up all the apps
+        String chooserTitle = getString(R.string.chooser);
+
+        // the createChooser method will select all the apps that are able to send messages
+        // and will list them along with the title specified above. Whichever one you select
+        // is returned, and then that activity is launched with the info passed.
+
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
+        overridePendingTransition(R.anim.slide_out, R.anim.slide_in) ;
     }
 }
